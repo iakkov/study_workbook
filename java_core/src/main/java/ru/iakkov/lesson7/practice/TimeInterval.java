@@ -1,5 +1,7 @@
 package ru.iakkov.lesson7.practice;
 
+import org.w3c.dom.ls.LSOutput;
+
 public class TimeInterval {
     private int seconds;
     private int minutes;
@@ -23,5 +25,7 @@ public class TimeInterval {
     public int totalSeconds() {
         return (seconds + (60 * minutes) + (3600 * hours));
     }
+
+
 
 }
