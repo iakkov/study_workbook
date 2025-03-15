@@ -18,5 +18,6 @@ public class Task4 {
             result[counter] = value.substring(i, i + n);
             counter++;
         }
+        return result;
     }
 }
