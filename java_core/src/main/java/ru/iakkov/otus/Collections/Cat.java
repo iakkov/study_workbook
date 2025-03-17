@@ -18,4 +18,8 @@ public class Cat {
     public String getColor() {return color;}
     public int getWight() {return wight;}
     public void setWight(int wight) {this.wight = wight;}
+
+    public String getInfo() {
+        return ("Имя: " + getName() + ", цвет: " + getColor() + ", размер: " + getWight());
+    }
 }
