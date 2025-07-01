@@ -3,7 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="alien" class="ru.project.spring_study.Alien">
-        <property name="age" value="10"></property>
+    <bean id="alien" class="ru.project.spring_study.Alien" autowire="byName">
+        <property name="age" value="15"></property>
     </bean>
+
+    <bean id="computer" class="ru.project.spring_study.Laptop"></bean>
+
+    <bean id="desktop" class="ru.project.spring_study.Desktop"></bean>
+
 </beans>
