@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Insert line here</title>
+    <title>Добавить Alien</title>
 </head>
 <body>
-Welcome
-<form action="add">
-    Enter number one : <input type="number" name="num1"><br>
-    Enter number two : <input type="number" name="num2"><br>
-    <input type="submit">
+<h1>Добавить нового пришельца</h1>
+
+<form action="/addAlien" method="post">
+    ID: <input type="number" name="id" required><br/>
+    Имя: <input type="text" name="name" required><br/>
+    Технология: <input type="text" name="tech" required><br/>
+    <button type="submit">Добавить</button>
 </form>
 
+<p><a href="/getAliens">Посмотреть всех пришельцев</a></p>
 </body>
 </html>
