@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /*
-Задача 1. Расшифровать и вывести в одну строку, разделенную запятыми. Алгоритм шифрования Base 64 (Streams)
+Decrypt and output in one line, separated by commas. Base 64 encryption algorithm (Streams)
  */
-public class Main {
+public class StreamTask {
     public static void main(String[] args) {
-        // Условие
+        // List
         List<List<String>> lists = List.of(List.of("SGUXMTExbC8tM6xvMyEyMy4uL1v", "dzBvcjFsZA=="),
                 List.of("aM4=", "dGgxMTExMyMyaXM="),
                 List.of("YmVhdXQxMyNpZjMxMnVs", "ZGF5"));
 
-        // Решение
+        // Solution
         String result = lists.stream()
                 .flatMap(List::stream)
                 .map(Base64.getDecoder()::decode)
