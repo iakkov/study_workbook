@@ -25,7 +25,13 @@ public class StreamTask {
                 .mapToDouble(Product::getPrice)
                 .average()
                 .orElse(0.0);
-                System.out.println("Средняя цена: " + result);
+        System.out.println("Средняя цена: " + result);
+
+        Product mostExpensiveElectronic = products.stream()
+                .filter(p -> "Electronics".equals(p.getCategory()))
+                .max((p1, p2) -> Double.compare(p1.getPrice(), p2.getPrice()))
+                .orElse(null);
+        System.out.println(mostExpensiveElectronic);
 
     }
 }
